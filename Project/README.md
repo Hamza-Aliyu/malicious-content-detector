@@ -1,6 +1,3 @@
-
-# malicious-content-detector
-
 # Secure Google Forms - Browser Extension
 
 A lightweight browser extension that monitors Google Forms and detects phishing links using heuristic-based analysis. This extension operates entirely locally with no external data transmission.
@@ -164,4 +161,3 @@ This extension is designed for educational and testing purposes. When contributi
 ## License
 
 MIT License - See package.json for details.
-

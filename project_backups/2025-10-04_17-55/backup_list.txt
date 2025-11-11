@@ -1,0 +1,6 @@
+Backup created: 2025-10-04 17:55
+Files to be backed up:
+- src/background.js
+- src/manifest.json
+
+Purpose: Fix Chrome system notifications with proper PNG icon handling

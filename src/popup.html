@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Google Forms</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <h1>🛡️ Secure Google Forms</h1>
+      <div class="status-indicator">
+        <span id="status-text">Active</span>
+        <div class="toggle-switch">
+          <input type="checkbox" id="extension-toggle" checked>
+          <label for="extension-toggle"></label>
+        </div>
+      </div>
+    </header>
+
+    <div class="settings-section">
+      <div class="setting-item">
+        <label>
+          <input type="checkbox" id="notifications-toggle" checked>
+          Enable notifications
+        </label>
+      </div>
+    </div>
+
+    <div class="alerts-section">
+      <div class="section-header">
+        <h2>Recent Alerts</h2>
+        <button id="clear-alerts" class="clear-btn">Clear All</button>
+      </div>
+      
+      <div id="alerts-container">
+        <div class="loading">Loading alerts...</div>
+      </div>
+      
+      <div id="no-alerts" class="no-alerts" style="display: none;">
+        <div class="no-alerts-icon">✅</div>
+        <p>No phishing attempts detected</p>
+        <small>The extension is monitoring for suspicious Google Forms</small>
+      </div>
+    </div>
+
+    <footer class="popup-footer">
+      <div class="footer-info">
+        <small>Local detection only • No data transmitted</small>
+      </div>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

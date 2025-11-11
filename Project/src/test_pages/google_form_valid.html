@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Form - Test Survey</title>
+    <style>
+        body {
+            font-family: 'Google Sans', Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+            overflow: hidden;
+        }
+        .form-header {
+            background: #673ab7;
+            color: white;
+            padding: 24px;
+        }
+        .form-title {
+            font-size: 32px;
+            font-weight: 400;
+            margin: 0 0 8px 0;
+        }
+        .form-description {
+            font-size: 14px;
+            opacity: 0.9;
+            margin: 0;
+        }
+        .form-content {
+            padding: 24px;
+        }
+        .question {
+            margin-bottom: 24px;
+        }
+        .question-title {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 8px;
+            color: #202124;
+        }
+        .question-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .question-input:focus {
+            border-color: #4285f4;
+            outline: none;
+        }
+        .submit-btn {
+            background: #4285f4;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .submit-btn:hover {
+            background: #3367d6;
+        }
+        .google-logo {
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <div class="google-logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCA3NCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuMjQgOGgtMi4ydjEuNjhoNC4yNmMtLjEgMS4wNC0uNTMgMS45My0xLjEgMi42M3YyLjE3aDIuMzNjMS4wNi0uOTggMS42OS0yLjQyIDEuNjktNC4xMiAwLS4zNS0uMDMtLjY5LS4wOS0xLjAzeiIgZmlsbD0iI0ZGRkZGRiIvPgo8cGF0aCBkPSJNNi4xMyAxNC4yNWMtLjQzIDAtLjg0LS4wNy0xLjIzLS4yMWwtLjI3IDEuMDljLjUxLjI1IDEuMDkuMzkgMS43LjM5IDEuNzEgMCAzLjE4LS41NyA0LjI0LTEuNTRsLTIuMDctMS42Yy0uNTYuMzctMS4yNy41OS0yLjA3LjU5eiIgZmlsbD0iI0ZGRkZGRiIvPgo8L3N2Zz4K" alt="Google" width="74" height="24">
+            </div>
+            <h1 class="form-title">Test Survey</h1>
+            <p class="form-description">This is a sample Google Form for testing the Secure Google Forms extension</p>
+        </div>
+        
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSe_testform/formResponse" method="POST" class="form-content">
+            <div class="question">
+                <div class="question-title">What is your name? *</div>
+                <input type="text" name="entry.123456789" class="question-input" required>
+            </div>
+            
+            <div class="question">
+                <div class="question-title">What is your email address?</div>
+                <input type="email" name="entry.987654321" class="question-input">
+            </div>
+            
+            <div class="question">
+                <div class="question-title">How would you rate our service?</div>
+                <select name="entry.456789123" class="question-input">
+                    <option value="">Choose...</option>
+                    <option value="Excellent">Excellent</option>
+                    <option value="Good">Good</option>
+                    <option value="Fair">Fair</option>
+                    <option value="Poor">Poor</option>
+                </select>
+            </div>
+            
+            <div class="question">
+                <div class="question-title">Any additional comments?</div>
+                <textarea name="entry.789123456" class="question-input" rows="4"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+    
+    <script>
+        // Simulate Google Forms behavior
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your response! (This is a test form)');
+        });
+    </script>
+</body>
+</html>

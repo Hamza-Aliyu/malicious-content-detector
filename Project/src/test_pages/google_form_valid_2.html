@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Form - Customer Feedback</title>
+    <!-- TEST PAGE: BENIGN - Legitimate Google Form mock with valid action -->
+    <style>
+        body {
+            font-family: 'Google Sans', Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+            overflow: hidden;
+        }
+        .form-header {
+            background: #4285f4;
+            color: white;
+            padding: 24px;
+        }
+        .form-title {
+            font-size: 28px;
+            font-weight: 400;
+            margin: 0 0 8px 0;
+        }
+        .form-description {
+            font-size: 14px;
+            opacity: 0.9;
+            margin: 0;
+        }
+        .form-content {
+            padding: 24px;
+        }
+        .question {
+            margin-bottom: 24px;
+        }
+        .question-title {
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 8px;
+            color: #202124;
+        }
+        .question-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .question-input:focus {
+            border-color: #4285f4;
+            outline: none;
+        }
+        .submit-btn {
+            background: #4285f4;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .submit-btn:hover {
+            background: #3367d6;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h1 class="form-title">Customer Feedback Survey</h1>
+            <p class="form-description">Help us improve our service by sharing your feedback</p>
+        </div>
+        
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSe_valid_form_2/formResponse" method="POST" class="form-content">
+            <div class="question">
+                <div class="question-title">Your Name</div>
+                <input type="text" name="entry.111111111" class="question-input" required>
+            </div>
+            
+            <div class="question">
+                <div class="question-title">Email Address</div>
+                <input type="email" name="entry.222222222" class="question-input">
+            </div>
+            
+            <div class="question">
+                <div class="question-title">How satisfied are you with our service?</div>
+                <select name="entry.333333333" class="question-input">
+                    <option value="">Choose...</option>
+                    <option value="Very Satisfied">Very Satisfied</option>
+                    <option value="Satisfied">Satisfied</option>
+                    <option value="Neutral">Neutral</option>
+                    <option value="Dissatisfied">Dissatisfied</option>
+                </select>
+            </div>
+            
+            <div class="question">
+                <div class="question-title">Additional Comments</div>
+                <textarea name="entry.444444444" class="question-input" rows="4"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+    
+    <script>
+        // Prevent actual submission for testing
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('✅ VALID FORM: This is a legitimate Google Form mock. No phishing detected.');
+        });
+    </script>
+</body>
+</html>

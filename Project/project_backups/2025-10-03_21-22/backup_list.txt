@@ -1,0 +1,9 @@
+Backup created: 2025-10-03 21:22
+Files backed up:
+- src/background.js
+- src/manifest.json
+- webpack.config.js
+- src/content.js
+- src/popup.js
+
+Purpose: Safe backup before applying minimal notification fix to resolve "Unable to download all specified images" error.

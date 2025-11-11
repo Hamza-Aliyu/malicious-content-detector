@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Form - Prize Claim</title>
+    <!-- TEST PAGE: PHISHING - Punycode link (internationalized domain spoofing) -->
+    <style>
+        body {
+            font-family: 'Google Sans', Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+            overflow: hidden;
+        }
+        .form-header {
+            background: #4285f4;
+            color: white;
+            padding: 24px;
+        }
+        .form-title {
+            font-size: 28px;
+            font-weight: 400;
+            margin: 0 0 8px 0;
+        }
+        .form-description {
+            font-size: 14px;
+            opacity: 0.9;
+            margin: 0;
+        }
+        .form-content {
+            padding: 24px;
+        }
+        .question {
+            margin-bottom: 24px;
+        }
+        .question-title {
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 8px;
+            color: #202124;
+        }
+        .question-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .submit-btn {
+            background: #4285f4;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .prize-notice {
+            background: #e8f5e9;
+            border: 1px solid #4caf50;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 4px;
+            color: #2e7d32;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h1 class="form-title">🎉 Congratulations!</h1>
+            <p class="form-description">Google Form - Claim Your Prize</p>
+        </div>
+        
+        <div class="form-content">
+            <div class="prize-notice">
+                <strong>You've won a $500 gift card!</strong><br>
+                Complete this form to claim your prize.
+            </div>
+            
+            <form action="https://phishing-site.test/claim" method="POST">
+                <div class="question">
+                    <div class="question-title">Full Name</div>
+                    <input type="text" name="name" class="question-input" required>
+                </div>
+                
+                <div class="question">
+                    <div class="question-title">Email Address</div>
+                    <input type="email" name="email" class="question-input" required>
+                </div>
+                
+                <div class="question">
+                    <div class="question-title">Shipping Address</div>
+                    <textarea name="address" class="question-input" rows="3" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Claim Prize</button>
+            </form>
+            
+            <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid #dadce0; font-size: 12px;">
+                <p>Terms and conditions: <a href="http://xn--googl-9ra.example/">http://xn--googl-9ra.example/</a></p>
+                <p>For support, visit: <a href="http://xn--ggl-tna.test/support">http://xn--ggl-tna.test/support</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('⚠️ PHISHING DETECTED: Punycode links detected (domain spoofing attempt)');
+        });
+    </script>
+</body>
+</html>

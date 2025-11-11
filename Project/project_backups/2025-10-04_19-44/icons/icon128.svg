@@ -1,0 +1,9 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <rect width="128" height="128" fill="#4285f4" rx="16"/>
+  <path d="M64 24L80 48H72V80H56V48H48L64 24Z" fill="white"/>
+  <rect x="32" y="88" width="64" height="8" fill="white"/>
+  <rect x="40" y="96" width="48" height="8" fill="white"/>
+  <circle cx="96" cy="32" r="16" fill="#ff4444"/>
+  <path d="M88 32L96 24L104 32L96 40Z" fill="white"/>
+  <text x="64" y="116" text-anchor="middle" fill="white" font-family="Arial" font-size="12" font-weight="bold">SECURE</text>
+</svg>

